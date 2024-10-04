@@ -1,0 +1,59 @@
+{
+  "name": "larowka/support-bot",
+  "description": "Laravel Support Bot",
+  "type": "library",
+  "keywords": [
+    "laravel",
+    "telegram",
+    "support",
+    "bot"
+  ],
+  "homepage": "https://github.com/larowka/support-bot",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Serj Toropilin",
+      "email": "larowka@icloud.com",
+      "homepage": "https://larowka.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^8.1",
+    "illuminate/http": "^10.0|^11.0",
+    "illuminate/support": "^10.0|^11.0",
+    "guzzlehttp/guzzle": "^7.6"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^10.5",
+    "orchestra/testbench": "^8.0|^9.0",
+    "laravel/pint": "^1.16"
+  },
+  "autoload": {
+    "psr-4": {
+      "Larowka\\SupportBot\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Larowka\\SupportBot\\Tests\\": "tests"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Larowka\\SupportBot\\SupportBotServiceProvider"
+      ],
+      "aliases": {
+        "SupportManager": "Larowka\\SupportBot\\Facades\\SupportManager"
+      }
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "testdox": "vendor/bin/phpunit --testdox",
+    "pint": "vendor/bin/pint"
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
